@@ -20,11 +20,11 @@ import Foundation
     // MARK: Initializers
     
     public init(pathExtension: String) {
-        predicate = NSPredicate(format: "(pathExtension = %@)", argumentArray: [pathExtension])
+        predicate = NSPredicate(format: "(pathExtension = %@)", argumentArray: [pathExtension])!
     }
     
     public init(lastPathComponent: String) {
-        predicate = NSPredicate(format: "(lastPathComponent = %@)", argumentArray: [lastPathComponent])
+        predicate = NSPredicate(format: "(lastPathComponent = %@)", argumentArray: [lastPathComponent])!
     }
     
     // MARK: ListCoordinator

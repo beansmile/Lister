@@ -10,5 +10,9 @@
 	<array>
 		<string>CloudDocuments</string>
 	</array>
+	<key>com.apple.developer.ubiquity-container-identifiers</key>
+	<array>
+		<string>iCloud.com.example.apple-samplecode.Lister.Documents</string>
+	</array>
 </dict>
 </plist>

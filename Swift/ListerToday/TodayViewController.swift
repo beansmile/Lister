@@ -231,7 +231,7 @@ class TodayViewController: UITableViewController, ListControllerDelegate, NCWidg
         
         // Open the main app if an item is tapped.
         let url = NSURL(string: "lister://today")
-        extensionContext?.openURL(url, completionHandler: nil)
+        extensionContext?.openURL(url!, completionHandler: nil)
     }
     
     // MARK: IBActions

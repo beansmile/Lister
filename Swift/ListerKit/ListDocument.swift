@@ -25,7 +25,7 @@ public class ListDocument: UIDocument {
     
     // MARK: Initializers
 
-    override public init(fileURL url: NSURL) {
+    override public init?(fileURL url: NSURL) {
         super.init(fileURL: url)
     }
 
@@ -64,6 +64,6 @@ public class ListDocument: UIDocument {
     
     override public func updateUserActivityState(userActivity: NSUserActivity) {
         super.updateUserActivityState(userActivity)
-        userActivity.addUserInfoEntriesFromDictionary([ AppConfiguration.UserActivity.listColorUserInfoKey: list.color.toRaw() ])
+        userActivity.addUserInfoEntriesFromDictionary([ AppConfiguration.UserActivity.listColorUserInfoKey: list.color.rawValue ])
     }
 }

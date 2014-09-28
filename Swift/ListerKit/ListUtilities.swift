@@ -88,13 +88,13 @@ public class ListUtilities {
             }
             
             var readError: NSError?
-            let contents = NSData.dataWithContentsOfURL(readingIntent.URL, options: .DataReadingUncached, error: &readError)
+            let contents = NSData(contentsOfURL: readingIntent.URL, options: .DataReadingUncached, error: &readError)
 
             if successfulSecurityScopedResourceAccess {
                 url.stopAccessingSecurityScopedResource()
             }
             
-            if let deserializedList = NSKeyedUnarchiver.unarchiveObjectWithData(contents) as? List {
+            if let deserializedList = NSKeyedUnarchiver.unarchiveObjectWithData(contents!) as? List {
                 completionHandler(deserializedList, nil)
             }
             else {

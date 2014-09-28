@@ -38,13 +38,13 @@ import Foundation
     public convenience init(pathExtension: String) {
         let predicate = NSPredicate(format: "(%K.pathExtension = %@)", argumentArray: [NSMetadataItemURLKey, pathExtension])
         
-        self.init(predicate: predicate)
+        self.init(predicate: predicate!)
     }
     
     public convenience init(lastPathComponent: String) {
         let predicate = NSPredicate(format: "(%K.lastPathComponent = %@)", argumentArray: [NSMetadataItemURLKey, lastPathComponent])
 
-        self.init(predicate: predicate)
+        self.init(predicate: predicate!)
     }
     
     private init(predicate: NSPredicate) {
